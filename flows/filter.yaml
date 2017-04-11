@@ -1,0 +1,24 @@
+name: filter
+states:
+    filter:
+        component: meya.card
+        properties:
+            title: Filter coffee?
+            text: focusing on the negative, ignoring positives?
+            image_url: "http://i.imgur.com/vgbOPuR.jpg"
+            output: button_click
+            buttons:
+                - text: Yes
+                  action: button_action
+                  data:
+                    filter: yes
+                - text: No
+                  action: button_action
+                  data:
+                    filter: no
+        transitions:
+            button_action: show
+    show:
+        component: meya.text
+        properties:
+            text: You clicked {{ flow.button_click }}

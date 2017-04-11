@@ -1,0 +1,38 @@
+name: list
+states:
+    list:
+        component: meya.list
+        properties:
+            top_element_style: large
+            buttons:
+                - text: "More space stuff"
+                  action: more
+            elements:
+                - title: Crab Nebula
+                  subtitle: Photo by the Hubble Space Telescope.
+                  image_url: "http://www.space.com/images/i/000/001/365/original/051201_iod_crabnebula_02.jpg?interpolation=lanczos-none&downsize=320:*"
+                  buttons:
+                    - text: Learn more
+                      action: crab
+                  default_action:
+                    url: "https://en.wikipedia.org/wiki/Crab_Nebula"
+                    webview_height_ratio: tall
+                - title: Orion Nebula
+                  subtitle: dense pillars of gas and dust
+                  image_url: "http://www.space.com/images/i/000/001/412/original/060111_orion_hubble_02.jpg?interpolation=lanczos-none&downsize=320:*"
+                  buttons:
+                    - text: Learn more
+                      action: orion
+                  default_action:
+                    url: "https://en.wikipedia.org/wiki/Orion_Nebula"
+                    webview_height_ratio: tall
+                - title: What a beauty?
+                  subtitle: Amateur photo of a nebula
+                  image_url: "https://upload.wikimedia.org/wikipedia/commons/3/3c/The_Orion_Nebula_M42.jpg"
+                  buttons:
+                    - text: What is pi?
+                      flow: pi
+    space:
+        component: meya.text
+        properties:
+            text: "From the perspective of an Earthling, outer space is a zone that occurs about 100 kilometers (60 miles) above the planet, where there is no appreciable air to breathe or to scatter light."

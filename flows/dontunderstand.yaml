@@ -1,0 +1,12 @@
+name: dontunderstand
+states:
+    transfer:
+        component: human.transfer
+        properties:
+            text: >
+                One moment while I get a live agent to help.
+            note: |
+                Bot didn't understand what the user said
+
+                "{{ flow.value }}"
+        return: true

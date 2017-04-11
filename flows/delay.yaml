@@ -1,0 +1,13 @@
+name: delay
+states:
+    first:
+        component: meya.text
+        properties:
+            text: >
+                Hi, now pause for Δ5s with typing on.
+        delay:
+            relative: 5
+    second:
+        component: meya.text
+        properties:
+            text: Done! 😎

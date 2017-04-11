@@ -1,0 +1,6 @@
+name: help
+states:
+  first:
+    component: meya.text
+    properties:
+      text: This is a demo bot. Try saying "I'd like to upgrade by TV."

@@ -1,0 +1,12 @@
+name: routing
+route: true
+states:
+  greeting:
+    flow: greeting
+    return: true
+  upgrade:
+    flow: upgrade
+    return: true
+  cancel:
+    flow: cancel
+    return: true

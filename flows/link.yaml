@@ -1,0 +1,6 @@
+name: link
+states:
+  first:
+    component: meya.text
+    properties:
+      text: http://help.msg91.com/

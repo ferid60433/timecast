@@ -1,0 +1,31 @@
+name: location
+states:
+    location:
+        component: meya.text_buttons
+        properties:
+            text: Where are you?
+            output: button_click
+            scope: flow
+            mode: quick_reply
+            buttons:
+            -   type: location
+                action: sendlocation
+            -   text: No, thanks
+                action: nope
+        transitions:
+            nope: done
+            sendlocation: location_out
+    location_out:
+        component: meya.text
+        properties:
+            text: "🗺 You are here: {{ flow.lat }}, {{ flow.lng }}"
+    location_out2:
+        component: meya.text
+        properties:
+            text: "How is the weather in {{ flow.city }}?"
+        return: true
+    done:
+        component: meya.text
+        properties:
+            text: You're entitled to your privacy.
+        return: true

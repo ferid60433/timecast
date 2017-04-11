@@ -1,0 +1,8 @@
+name: upgrade_promo
+states:
+    unlock:
+        component: meya.text
+        properties:
+            text: Ooh, looks like you have unlocked the "{{ user.referral }}" special!
+    upgrade:
+        flow: upgrade

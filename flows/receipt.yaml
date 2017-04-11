@@ -1,0 +1,59 @@
+name: receipt
+states:
+    receipt_state:
+        component: meya.receipt
+        properties:
+            recipient_name: "Erik Kalviainen"
+            merchant_name: "Amazon.ca"
+            order_number: "ABC123"
+            currency: "USD"
+            payment_method: "MasterCard 7891"
+            order_url: "http://petersapparel.parseapp.com/order?order_id=123456"
+            timestamp: "1428444852"
+            elements:
+                - title: "iPhone 7+"
+                  subtitle: "A great Apple phone. Expensive $$$"
+                  price: 1049
+                  image_url: "http://cdn2.gsmarena.com/vv/bigpic/apple-iphone-7r4.jpg"
+                  quantity: 1
+                  currency: "USD"
+                - title: "iPhone 7+ case"
+                  subtitle: "Recommended by wirecutter"
+                  price: 19.99
+                  image_url: "http://thewirecutter5.wpengine.netdna-cdn.com/wp-content/uploads/2016/10/iphone7cases-lowres-4592.jpg"
+                  quantity: 2
+                  currency: "USD"
+            summary:
+                subtotal: 1068.99
+                shipping_cost: 0.01
+                total_tax: 198.97
+                total_cost: 1207.97
+            address:
+                street_1: "383 Red Osier Rd."
+                city: "Los Angeles"
+                state: "California"
+                country: "USA"
+                postal_code: "90210"
+    receipt_state2:
+        component: meya.receipt
+        properties:
+            recipient_name: your_recipient
+            merchant_name: your_merchant_name
+            order_number: your_order_number
+            currency: USD
+            payment_method: your_payment_method
+            elements:
+                - title: element_1
+                  price: 0
+                  image_url: "http://pipsum.com/60x60.jpg"
+                - title: element_N
+                  price: 0
+                  image_url: "http://pipsum.com/60x60.jpg"
+            summary:
+                total_cost: 0
+            address:
+                street_1: your_street
+                city: your_city
+                state: your_state
+                country: your_country
+                postal_code: your_postal_code

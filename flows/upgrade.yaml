@@ -1,0 +1,25 @@
+name: upgrade
+states:
+    ack:
+        component: meya.text
+        properties:
+            text: I can definitely help you with that.
+        transitions:
+            next: auth
+        delay:
+            relative: 1
+    auth:
+        flow: auth
+        transitions:
+            done: transfer
+        delay:
+            relative: 1
+    transfer:
+        component: human.transfer
+        typing: true
+        properties:
+            text: Thanks. One moment while I upgrade your package...
+            note: |
+                action - {{ flow.package }}
+                account # - {{ user.account_id }}
+                zip - {{ user.zip }}
