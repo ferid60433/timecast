@@ -3,4 +3,4 @@ states:
   first:
     component: meya.text
     properties:
-      text: Hello, world!
+      text: Hello, world! 🎉
