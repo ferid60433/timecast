@@ -1,4 +1,7 @@
-name: receipt
+triggers:
+  - type: meya.keyword
+    properties:
+        keyword: receipt
 states:
     receipt_state:
         component: meya.receipt

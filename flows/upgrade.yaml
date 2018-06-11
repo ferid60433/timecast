@@ -1,4 +1,7 @@
-name: upgrade
+triggers:
+  - type: meya.keyword
+    properties:
+        keyword: __upgrade__
 states:
     ack:
         component: meya.text

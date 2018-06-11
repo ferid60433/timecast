@@ -1,4 +1,7 @@
-name: delay
+triggers:
+  - type: meya.keyword
+    properties:
+        keyword: delay
 states:
     first:
         component: meya.text

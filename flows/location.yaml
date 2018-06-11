@@ -1,4 +1,7 @@
-name: location
+triggers:
+  - type: meya.keyword
+    properties:
+        keyword: location
 states:
     location:
         component: meya.text_buttons
