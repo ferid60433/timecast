@@ -1,33 +1,36 @@
-name: espn
+triggers:
+  - type: meya.keyword
+    properties:
+        keyword: __espn__
 states:
-  text_suggestions_state:
-    component: meya.text_suggestions
-    properties:
-      text: Just to confirm. Would you like me to add ESPN to your service for an
-        additional $7/mo effective immediately?
-      suggestions:
-      - 'Yes'
-      - 'No'
-    transitions:
-      'Yes': add_espn
-      'No': cancel
-  add_espn:
-    component: meya.text
-    properties:
-      text: Let me add ESPN to your account for you. One moment...
-    transitions:
-      next: done
-    delay:
-      relative: 2
-  cancel:
-    flow: anything_else
-    return: true
-  done:
-    component: meya.text
-    properties:
-      text: Done! You should now see ESPN channels on your TV.
-    delay:
-      relative: 2
-  transition:
-    flow: anything_else
-    return: true
+    text_suggestions_state:
+        component: meya.text_suggestions
+        properties:
+            text: Just to confirm. Would you like me to add ESPN to your service for an
+              additional $7/mo effective immediately?
+            suggestions:
+            - 'Yes'
+            - 'No'
+        transitions:
+            'Yes': add_espn
+            'No': cancel
+    add_espn:
+        component: meya.text
+        properties:
+            text: Let me add ESPN to your account for you. One moment...
+        transitions:
+            next: done
+        delay:
+            relative: 2
+    cancel:
+        flow: anything_else
+        return: true
+    done:
+        component: meya.text
+        properties:
+          text: Done! You should now see ESPN channels on your TV.
+        delay:
+          relative: 2
+    transition:
+        flow: anything_else
+        return: true

@@ -1,6 +1,9 @@
-name: link
-states:
-  first:
-    component: meya.text
+triggers:
+  - type: meya.keyword
     properties:
-      text: http://help.msg91.com/
+        keyword: msg
+states:
+    first:
+        component: meya.text
+        properties:
+            text: http://help.msg91.com/

@@ -1,19 +1,22 @@
-name: anything_else
+triggers:
+  - type: meya.keyword
+    properties:
+        keyword: __anything_else__
 states:
-  first:
-    component: meya.nlp_yes_no
-    properties:
-      text: Is there anything else I can help you with?
-    transitions:
-      'yes': yes_state
-      'no': no_state
-  yes_state:
-    component: meya.text
-    properties:
-      text: What would you like?
-    return: true
-  no_state:
-    component: meya.text
-    properties:
-      text: No problem. Have a nice day!
-    return: true
+    first:
+      component: meya.nlp_yes_no
+      properties:
+        text: Is there anything else I can help you with?
+      transitions:
+        'yes': yes_state
+        'no': no_state
+    yes_state:
+      component: meya.text
+      properties:
+        text: What would you like?
+      return: true
+    no_state:
+      component: meya.text
+      properties:
+        text: No problem. Have a nice day!
+      return: true

@@ -1,4 +1,7 @@
-name: upgrade_promo
+triggers:
+  - type: meya.keyword
+    properties:
+        keyword: upgrade_promo
 states:
     unlock:
         component: meya.text

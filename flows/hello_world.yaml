@@ -1,6 +1,9 @@
-name: hello_world
-states:
-  first:
-    component: meya.text
+triggers:
+  - type: meya.keyword
     properties:
-      text: Hello, world!
+        keyword: hi
+states:
+    first:
+        component: meya.text
+        properties:
+            text: Hello, world!

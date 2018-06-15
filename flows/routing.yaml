@@ -1,4 +1,7 @@
-name: routing
+triggers:
+  - type: meya.wit
+    properties:
+        token: 7U2TR6KQE53IV5EGHIDJVE4K5ABINBKV
 route: true
 states:
   greeting:

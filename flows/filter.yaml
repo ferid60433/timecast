@@ -1,4 +1,7 @@
-name: filter
+triggers:
+  - type: meya.keyword
+    properties:
+        keyword: filter
 states:
     filter:
         component: meya.card

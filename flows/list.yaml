@@ -1,4 +1,8 @@
-name: list
+triggers:
+  - type: meya.keyword
+    properties:
+        ignorecase: true
+        keyword: list
 states:
     list:
         component: meya.list
